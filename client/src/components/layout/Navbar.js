@@ -1,3 +1,6 @@
+//this is a class based component for the navbar
+
+//importing the dependancies
 import React, { Component } from 'react'
 
 class Navbar extends Component {
@@ -10,4 +13,5 @@ class Navbar extends Component {
   }
 }
 
+//exporting the component
 export default Navbar;

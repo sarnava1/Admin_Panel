@@ -1,3 +1,6 @@
+//this a functional component for the footer
+
+//importing the dependancies
 import React from 'react';
 
 export default () => {
