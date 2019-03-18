@@ -1,3 +1,4 @@
+//in this file we configure the passport js to work with the json web tokens configurations
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const mongoose = require('mongoose');
