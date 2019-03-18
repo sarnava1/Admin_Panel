@@ -15,7 +15,7 @@ class Register extends Component {
       errors: {}
     };
 
-    //binding this
+    //binding this to the functions
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
