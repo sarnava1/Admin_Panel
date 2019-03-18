@@ -3,6 +3,9 @@
 //importing the dependancies
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import { connect } from 'react-redux';
+import { registerUser } from '../../actions/authActions';
+import PropTypes from 'prop-types';
 
 class Register extends Component {
   constructor() {
@@ -35,12 +38,16 @@ class Register extends Component {
       password2: this.state.password2
     };
 
-    console.log(newUser);
+    //console.log(newUser);
+    this.props.registerUser(newUser);
+
   }
 
   render() {
 
     const { errors } = this.state;
+
+    const { user } = this.props.auth;
 
     return (
       <div className="register">
@@ -126,5 +133,14 @@ class Register extends Component {
   }
 }
 
+Resgister.PropTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+   auth: state.auth
+});
+
 //exporting the component
-export default Register; 
+export default connect(mapStateToProps, {registerUser})(Register); 
