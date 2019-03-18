@@ -1,4 +1,4 @@
-//this is a class based component for the navbar
+//this is a class based component for the landing route
 
 //importing the dependancies
 import React, { Component } from 'react';
