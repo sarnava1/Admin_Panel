@@ -1,7 +1,7 @@
 //importing the dependancies
 import { GET_ERRORS } from '../actions/types';
 
-//the initial state for the auth reducer
+//the initial state for the error reducer
 const initialState = {};
 
 export default function(state = initialState, action) {
