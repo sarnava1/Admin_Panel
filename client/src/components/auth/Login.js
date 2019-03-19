@@ -23,6 +23,12 @@ class Login extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/dashboard');
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
 
     if(nextProps.auth.isAuthenticated) {
@@ -103,7 +109,7 @@ class Login extends Component {
   }
 }
  
-Register.PropTypes = {
+Login.PropTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
