@@ -22,8 +22,9 @@ npm run client
 
 > You will need to create a keys_dev.js in the server config folder with
 
+```
 module.exports = { <br>
-  mongoURI: 'YOUR_OWN_MONGO_URI', <br>
-  secretOrKey: 'YOUR_OWN_SECRET'  <br>
+   mongoURI: 'YOUR_OWN_MONGO_URI', <br>
+   secretOrKey: 'YOUR_OWN_SECRET'  <br>
 };
-
+```
